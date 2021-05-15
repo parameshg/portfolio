@@ -1,0 +1,117 @@
+baseURL: https://www.paramg.com
+title: Paramesh Gunasekaran
+copyright: Copyright (C) 2020
+languageCode: en-us
+theme: hello-friend-ng
+PygmentsCodeFences: true
+PygmentsStyle: monokai
+paginate: 10
+rssLimit: 10
+googleAnalytics: 
+disqusShortname: 
+archetypeDir: archetypes
+contentDir: content
+dataDir: data
+layoutDir: layouts
+publishDir: public
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+canonifyURLs: true
+enableRobotsTXT: true
+enableGitInfo: false
+enableEmoji: true
+enableMissingTranslationPlaceholders: false
+disableRSS: false
+disableSitemap: false
+disable404: false
+disableHugoGeneratorInject: false
+
+permalinks:
+  posts: /:year/:month/:title/
+author:
+  name: Paramesh Gunasekaran
+blackfriday:
+  hrefTargetBlank: true
+taxonomies:
+  tag: tags
+  category: categories
+  series: series
+
+params:
+  dateform: Jan 2, 2006
+  dateformShort: Jan 2
+  dateformNum: 2006-01-02
+  dateformNumTime: 2006-01-02 15:04 -0700
+  description: Paramesh Gunasekaran
+  keywords: 
+  images: []
+  homeSubtitle: Technology Enthusiast
+  gitUrl: 
+  disableReadOtherPosts: false 
+  customCSS: []
+  customJS: []
+  justifyContent: false  # Set "text-align: justify" to .content
+  defaultTheme: dark # Default theme "light" or "dark"
+  themeColor: "#252627"
+  favicon:
+    color:
+      mask: "#252627"
+      msapplication: "#252627"
+      theme: "#252627"
+  logo:
+    logoText: $ echo param
+    logoHomeLink: /
+  portrait:
+    path: /img/image.jpg
+    alt: ""
+  social:
+    - name: twitter
+      url: https://twitter.com/parameshg
+    - name: email
+      url: mailto:paramesh.gunasekaran@gmail.com
+    - name: github
+      url: https://github.com/parameshg
+    - name: linkedin
+      url : https://www.linkedin.com/in/parameshgunasekaran
+    - name: stackoverflow
+      url: https://stackoverflow.com/users/6873709/param
+
+languages:
+  en:
+    subtitle: Technology Enthusiast
+    weight: 1
+    copyright: 
+  fr:
+    subtitle: Technology Enthusiast
+    weight: 2
+    copyright: 
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: about/
+    - identifier: blog
+      name: Blog
+      url: https://blog.paramg.com
+    - identifier: contact
+      name: Contact
+      url: contact/
+
+deployment:
+  order: [".jpg$", ".gif$"]
+  targets:
+    - name: test
+      URL: s3://test.paramg.com?region=us-west-2
+    - name: prod
+      URL: s3://www.paramg.com?region=us-west-2
+  matchers:
+    - pattern: "^.+\\.(js|css|svg|ttf)$"
+      cacheControl: max-age=3600, no-transform, public
+      gzip: true
+    - pattern: "^.+\\.(png|jpg)$"
+      cacheControl: max-age=3600, no-transform, public
+      gzip: false
+    - pattern: "^.+\\.(html|xml|json)$"
+      gzip: true
