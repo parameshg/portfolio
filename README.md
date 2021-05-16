@@ -1,12 +1,12 @@
-# paramg.com
+### paramg.com
 
-## Deploy To Test Environment (https://test.paramg.com)
+[![publish](https://github.com/parameshg/www-paramg-com/actions/workflows/publish.yml/badge.svg)](https://github.com/parameshg/www-paramg-com/actions/workflows/publish.yml)
 
-```
-hugo deploy --target test
-```
+This repository contains the static landing site for www.paramg.com
 
-## Deploy To Production Environment (https://www.paramg.com)
+#### Deploy
+
+The CI pipeline executes the following command to build and publish the site using GitHub actions.
 
 ```
 hugo deploy --target prod
