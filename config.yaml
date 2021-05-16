@@ -51,7 +51,7 @@ params:
   disableReadOtherPosts: false 
   customCSS: []
   customJS: []
-  justifyContent: false  # Set "text-align: justify" to .content
+  justifyContent: true  # Set "text-align: justify" to .content
   defaultTheme: dark # Default theme "light" or "dark"
   themeColor: "#252627"
   favicon:
@@ -92,12 +92,19 @@ menu:
     - identifier: about
       name: About
       url: about/
+      weight: 1
     - identifier: blog
       name: Blog
       url: https://blog.paramg.com
+      weight: 2
+    - identifier: talks
+      name: Talks
+      url: talks/
+      weight: 3
     - identifier: contact
       name: Contact
       url: contact/
+      weight: 4
 
 deployment:
   order: [".jpg$", ".gif$"]
