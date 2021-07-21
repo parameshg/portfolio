@@ -73,7 +73,7 @@ params:
     - name: github
       url: https://github.com/parameshg
     - name: linkedin
-      url : https://www.linkedin.com/in/parameshgunasekaran
+      url : https://linkedin.com/in/parameshg
     - name: stackoverflow
       url: https://stackoverflow.com/users/6873709/param
 
